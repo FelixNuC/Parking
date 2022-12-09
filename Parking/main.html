@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Parking</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+</head>
+<body>
+    <div id="capaloging">
+        <form>
+            <label for="Id">Id</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="Id" id="id_in" placeholder="identidad"><br><br>
+            <label for="Pass">Pass</label> <input type="password" name="pass" id="pass_in" placeholder="password"><br><br>
+            <input type="button" class="boton" value="Aceptar" onclick="verificaradmin()">
+        </form>
+    </div>
+
+    <div id="capahub">
+        <div id="ContadorPlazas">
+            <h1 class="conta" >Plazas Opcupadas</h1>
+            <h1 id="contador" class="conta"></h1> <!--LIVE COUNTER-->
+            <h1 class="conta">Plazas Libres</h1>
+            <h1 id="contadorLibres"class="conta"></h1> 
+            <input type="button" id="entradab" class="boton" value="Entradas" onclick="mostrarcapaentradas()">
+            <input type="button" id="salidab"class="boton" value="Salidas" onclick="mostrarcapasalidas()">
+            <input type="button" id="altab" class="boton"  value="Altas" onclick="mostrarcapaaltas()"> <!-- Da de altas a un vehiculo , recoge datos del propetario y del vehiuclo -->
+            <input type="button" id="bajab" class="boton"  value="Bajas" onclick="mostrarcapabajas()">
+         <!--<input type="button" value="Ingreso" onclick="mostrarcapalogin()"> -->   
+        </div>    
+    </div>
+
+    <div id="capaaltas">
+        <h1>ALTA COMPLETA</h1>
+        <form>
+            <label for="Matricula">Matricula</label> <input type="text" id="matricula_in"><br><br>
+            <label for="Marca">Marca</label> <input type="text" id="marca_in"><br><br>
+            <label for="Modelo">Modelo</label> <input type="text" id="modelo_in"><br><br>
+            <label for="DniCliente">DNI </label><input type="text" id="dni_in"><br><br>
+            <label for="NombrePropietario">Nombre Propietario</label> <input type="text" id="NombrePropietario_in"><br><br>
+            <label for="Apellido1">Apellido1</label> <input type="Apellido1" id="Apellido1_in"><br><br>
+            <label for="Apellido2">Apellido2</label> <input type="text" id="Apellido2_in"><br><br>
+            <label for="Telefono">Telefono</label> <input type="tel" id="telefono_in"><br><br>
+            <label for="Mail">Mail</label> <input type="email" id="mail_in"><br><br>
+            <input type="button"  class="boton" value="Aceptar" onclick="comprobaralta()">
+            <input type="button"id="atras"  class="boton" value="Atras" onclick="mostrarcapahub()">
+
+        </form>
+    </div>
+
+    <div id="capaentrada">
+        <h1>ENTRADA</h1>
+        <form>
+            <label for="Matricula">Matricula</label> <input type="text" id="matricula_inn"><br><br>
+            <label for="DniCliente">DNI</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" id="dni_inn"><br><br>
+            <input type="button"  class="boton" value="Aceptar" onclick="entradas()">
+            <input type="button"id="atras"  class="boton" value="Atras" onclick="mostrarcapahub()">
+        </form>
+    </div>
+
+    <div id="capabajas">
+        <h1>BAJA</h1>
+        <form>
+            <label for="DNI">DNI</label>&nbsp<input type="text" id="dni_innn"><br><br>
+            <input type="button"  class="boton" value="Aceptar" onclick="bajas()">
+            <input type="button"id="atras"  class="boton" value="Atras" onclick="mostrarcapahub()">
+        </form>
+    </div>
+    <div id="capasalidas">
+        <h1>SALIDA</h1>
+        <form>
+            <label for="Matricula">Matricula</label> <input type="text" id="matricula_innnn"><br><br>
+            <input type="button"  class="boton" value="Aceptar" onclick="salidas()">
+            <input type="button"id="atras"  class="boton" value="Atras" onclick="mostrarcapahub()">
+        </form>
+    </div>
+    <div id="capaaltacoche">
+        <h1>ALTA PARCIAL</h1>
+       <form>
+        <label for="DniCliente">DNI</label><input type="text" id="dni_ind"><br><br>
+        <label for="Matricula">Matricula</label> <input type="text" id="matricula_ind"><br><br>
+        <label for="Marca">Marca</label> <input type="text" id="marca_ind"><br><br>
+        <label for="Modelo">Modelo</label> <input type="text" id="modelo_ind"><br><br>
+        <input type="button"  class="boton"  value="Aceptar" onclick="dardealtacochenuevo()">
+        <input type="button" id="atras" class="boton"  value="Atras" onclick="mostrarcapahub()">
+    </form> 
+    </div>
+    <script src='main.js'></script>
+</body>
+</html>
